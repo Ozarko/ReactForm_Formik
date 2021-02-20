@@ -1,10 +1,10 @@
 import classes from "./CheckBoxControl.module.css";
 
-function CheckBoxControl() {
+function CheckBoxControl({isChecked, policeChecked}) {
   return (
     <div className={classes.CheckBoxControl}>
       <p>I accept the privacy policy and the terms of use</p>
-      <input type="checkbox" />
+      <input type="checkbox" checked={policeChecked} onChange={isChecked} />
     </div>
   );
 }
