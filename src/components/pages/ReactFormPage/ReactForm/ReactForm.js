@@ -109,11 +109,11 @@ class ReactForm extends Component {
       policeChecked: false,
       isFormValid: false,
     });
-  }
+  };
 
   render() {
     if (this.state.isFormValid) {
-      return <CompliteRegistration clearForm={this.clearForm}/>;
+      return <CompliteRegistration clearForm={this.clearForm} />;
     } else {
       return (
         <form onSubmit={this.submitHandler} className={classes.ReactForm}>

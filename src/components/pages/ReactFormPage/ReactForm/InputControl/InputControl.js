@@ -9,7 +9,6 @@ function InputControl({
   valid,
   errorMessage,
 }) {
-
   const styles = [classes.InputControl];
 
   const currentInput = useRef();

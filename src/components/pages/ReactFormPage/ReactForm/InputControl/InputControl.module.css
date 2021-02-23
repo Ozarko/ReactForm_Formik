@@ -15,11 +15,6 @@
   background: transparent;
 }
 
-.InputControl p {
-  height: 15px;
-  font-size: 10px;
-}
-
 .InputControl label {
   position: absolute;
   top:0;

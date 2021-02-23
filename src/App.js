@@ -1,7 +1,7 @@
 import { Redirect, Route, Switch } from "react-router-dom";
 import FormikAndYup from "./components/pages/FormikAndYap/FormikAndYup";
 import MainPage from "./components/pages/MainPage/MainPage";
-import ReactFormPage from "./components/pages/ReactRegistration/ReactFormPage/ReactFormPage";
+import ReactFormPage from "./components/pages/ReactFormPage/ReactFormPage";
 import Layout from "./components/UI/Layout/Layout";
 
 function App() {

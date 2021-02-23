@@ -1,34 +1,24 @@
-import React from 'react';
-import { Field, Formik, Form } from "formik";
-import { TextField, Button, Checkbox } from "@material-ui/core";
+import React, { useState } from "react";
 import classes from "./FormikAndYup.module.css";
+import CompliteRegistration from "../CompleteRegistrationPage/CompleteRegistrationPage";
+import FormikBox from "./Form/FormikBox";
 
 function FormikAndYup() {
+  const [FormikAndYupState, setFormikAndYupState] = useState(false);
+
+  const backToForm = () => {
+    setFormikAndYupState(false);
+  };
+
   return (
     <div className={classes.FormikAndYup}>
-      <Formik
-        initialValues={{
-          email: "",
-          password: "",
-          terms: false,
-        }}
-        onSubmit={(data) => {
-          console.log(data);
-        }}
-      >
-        {({ values, isSubmitting }) => (
-          <Form>
-            <Field name="email" type="input"/>
-            <Field name="password" type="input"/>
-            <Field name="terms" type="checkbox" as={Checkbox} />
-            <div>
-              <button>dsfsdf</button>
-            </div>
-          </Form>
-        )}
-      </Formik>
+      {!FormikAndYupState ? (
+        <FormikBox setFormikAndYupState={setFormikAndYupState} />
+      ) : (
+        <CompliteRegistration clearForm={backToForm} />
+      )}
     </div>
   );
-} 
+}
 
 export default FormikAndYup;

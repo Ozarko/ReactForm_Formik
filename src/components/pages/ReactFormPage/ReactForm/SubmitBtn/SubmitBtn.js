@@ -2,8 +2,7 @@ import classes from "./SubmitBtn.module.css";
 
 function SubmitBtn({ formSubmit, isValid }) {
   const isFormValid = isValid();
-  console.log(isFormValid)
-
+  
   const styles = [classes.SubmitBtn];
 
   if (isFormValid) {
